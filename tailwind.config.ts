@@ -19,6 +19,9 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+			'custom-blue-1': 'rgba(6,58,128,1)',
+			'custom-blue-2': 'rgba(5,76,143,1)',
+			'custom-blue-3': 'rgba(0,212,255,1)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -30,7 +33,7 @@ const config: Config = {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
+				DEFAULT: '#063a80',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
