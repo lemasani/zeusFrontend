@@ -2,6 +2,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from './../public/svgs/3.svg';
 
+const links = [
+  {
+    href: '/',
+    label: 'Home'
+  },
+  {
+    href: '/about',
+    label: 'About'
+  },
+  {
+    href: '/rentals',
+    label: 'Rentals'
+  },
+  {
+    href: '/contact',
+    label: 'Contact'
+  }
+]
+
 export default function Navbar() {
   return (
     <>
@@ -12,10 +31,12 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="nav-links flex justify-around items-center p-2 gap-5 text-[#063a80]">
-          <Link href="/" className="link">Home</Link>
-          <Link href="/about" className="link">About</Link>
-          <Link href="/rentals" className="link">Rentals</Link>
-          <Link href="/contact" className="link">Contact</Link>
+          {
+            links.map((link, index) =>{
+              return <Link href={link.href} key={index} className='link'>{link.label}</Link>
+            })
+          }
+      
         </div>
         <div className="signups flex justify-between gap-5 p-2">
           <Link href="/signin" className="p-3  rounded-md">Sign in</Link>
